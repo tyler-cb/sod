@@ -102,6 +102,7 @@ const SPEC_CONFIG = registerSpecConfig(Spec.SpecWarrior, {
 			stoneskinTotem: TristateEffect.TristateEffectImproved,
 		}),
 		partyBuffs: PartyBuffs.create({
+			heroicPresence: false,
 		}),
 		individualBuffs: IndividualBuffs.create({
 			blessingOfKings: true,

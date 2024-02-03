@@ -1,4 +1,0 @@
-package shaman
-
-func init() {
-}

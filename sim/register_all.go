@@ -3,7 +3,6 @@ package sim
 import (
 	_ "github.com/wowsims/sod/sim/common"
 	"github.com/wowsims/sod/sim/druid/balance"
-	"github.com/wowsims/sod/sim/shaman/elemental"
 
 	"github.com/wowsims/sod/sim/druid/feral"
 	// restoDruid "github.com/wowsims/sod/sim/druid/restoration"
@@ -39,7 +38,7 @@ func RegisterAll() {
 	feral.RegisterFeralDruid()
 	// feralTank.RegisterFeralTankDruid()
 	// restoDruid.RegisterRestorationDruid()
-	elemental.RegisterElementalShaman()
+	// elemental.RegisterElementalShaman()
 	// enhancement.RegisterEnhancementShaman()
 	// restoShaman.RegisterRestorationShaman()
 	hunter.RegisterHunter()

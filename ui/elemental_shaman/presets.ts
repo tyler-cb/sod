@@ -18,30 +18,33 @@ import {
 
 import * as PresetUtils from '../core/preset_utils.js';
 
-import BlankGear from './gear_sets/blank.gear.json';
-import Phase1Gear from './gear_sets/phase_1.gear.json';
+import BlankGear from './gear_sets/blank.gear.json'
 
-import Phase1APL from './apls/phase_1.apl.json';
+import AdvancedApl from './apls/advanced.apl.json';
+import DefaultApl from './apls/default.apl.json';
 
 // Preset options for this spec.
 // Eventually we will import these values for the raid sim too, so its good to
 // keep them in a separate file.
 
-export const BlankPresetGear = PresetUtils.makePresetGear('Blank', BlankGear);
-export const Phase1PresetGear = PresetUtils.makePresetGear('Phase 1', Phase1Gear);
+export const DefaultGear = PresetUtils.makePresetGear('Blank', BlankGear);
 
-export const DefaultGear = Phase1PresetGear;
-
-export const Phase1PresetAPL = PresetUtils.makePresetAPLRotation('Phase 1', Phase1APL);
-
-export const DefaultAPL = Phase1PresetAPL
+export const ROTATION_PRESET_DEFAULT = PresetUtils.makePresetAPLRotation('Default', DefaultApl);
+export const ROTATION_PRESET_ADVANCED = PresetUtils.makePresetAPLRotation('Advanced', AdvancedApl);
 
 // Default talents. Uses the wowhead calculator format, make the talents on
 // https://wowhead.com/classic/talent-calc and copy the numbers in the url.
 export const StandardTalents = {
-  name: 'Phase 1',
+  name: 'Standard',
   data: SavedTalents.create({
-    talentsString: '25003105',
+    talentsString: '0532001523212351322301351-005052031',
+  }),
+};
+
+export const Phase4Talents = {
+  name: 'Phase 4',
+  data: SavedTalents.create({
+    talentsString: '0533001523213351322301351-005050031',
   }),
 };
 
@@ -49,9 +52,10 @@ export const DefaultOptions = ElementalShamanOptions.create({
   shield: ShamanShield.WaterShield,
   totems: ShamanTotems.create({
     earth: EarthTotem.StrengthOfEarthTotem,
-    air: AirTotem.WindfuryTotem,
+    air: AirTotem.WrathOfAirTotem,
     fire: FireTotem.TotemOfWrath,
     water: WaterTotem.ManaSpringTotem,
+    useFireElemental: true,
   }),
 });
 

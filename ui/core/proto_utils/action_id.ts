@@ -299,10 +299,9 @@ export class ActionId {
 				}
 				break;
 			case 'Chain Lightning':
-			case 'Lava Burst':
 			case 'Lightning Bolt':
 				if (this.tag == 6) {
-					name += ' (Overload)';
+					name += ' (LO)';
 				} else if (this.tag) {
 					name += ` (${this.tag} MW)`;
 				}
